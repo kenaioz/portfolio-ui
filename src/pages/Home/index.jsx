@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import {
   Container,
@@ -17,8 +17,6 @@ import { TechSection } from "../../components/Techs";
 import { ProjectsCardsWrapper, ProjectsCards } from "../../components/Projects";
 import { Input, TextArea, Button } from "../../components/Forms";
 import { Footer } from "../../components/Footer";
-
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 
 import profilePic from "../../assets/profile-pic.png";
 
