@@ -21,6 +21,10 @@ export default createGlobalStyle`
     outline: none;
   }
 
+  h1 {
+    font-size: 2rem;
+  }
+
   h1, h2, h3, label {
     font-family: 'Poppins', sans-serif;
     outline: none;

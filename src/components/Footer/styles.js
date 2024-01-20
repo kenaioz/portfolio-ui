@@ -17,7 +17,7 @@ export const FooterContent = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 46px;
   justify-content: space-between;
 
   ul {

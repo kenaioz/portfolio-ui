@@ -136,6 +136,10 @@ export function Home() {
                   title="Database"
                   technologies={techData.database}
                 />
+                <TechSection
+                  title="Outras Tecnologias/Ferramentas"
+                  technologies={techData.others}
+                />
               </div>
             </div>
             <img src={DevelopingSVG} alt="Developing SVG" />
@@ -166,9 +170,8 @@ export function Home() {
             <div className="textWrapper">
               <form id="contact-us">
                 <fieldset>
-                  <legend>
-                    <h1>Entre em contato</h1>
-                  </legend>
+                  <h1>Entre em contato</h1>
+
                   <Input
                     id="name"
                     label="Nome"

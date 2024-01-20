@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const PageContent = styled.div`
-  padding: 5.6rem 0 16.375rem;
+  padding: 5.6rem 0 19rem;
 `;
 
 export const Intro = styled.div`
@@ -156,10 +156,6 @@ export const Contact = styled.section`
       display: flex;
       flex-direction: column;
       gap: 16px;
-
-      legend {
-        margin-bottom: 16px;
-      }
     }
   }
 

@@ -6,22 +6,30 @@ import {
 } from "./styles";
 
 export function TechSection({ title, technologies }) {
-  if (title.includes("-")) {
+  const hasHyphen = title.includes("-");
+  const hasSlash = title.includes("/");
+
+  let firstPart, secondPart;
+
+  if (hasHyphen) {
     const partes = title.split("-");
-    var firstPart = partes[0];
-    var secondPart = partes.slice(1).join("-");
+    firstPart = partes[0];
+    secondPart = partes.slice(1).join("-");
+  } else if (hasSlash) {
+    const partes = title.split("/");
+    firstPart = partes[0];
+    secondPart = partes.slice(1).join("/");
   }
+
   return (
     <ContainerTechSection>
-      {title.includes("-") ? (
-        <h2>
-          {firstPart}
-          <span>{"-"}</span>
-          {secondPart}
-        </h2>
-      ) : (
-        <h2>{title}</h2>
-      )}
+      <h2>
+        {firstPart && firstPart}
+        {hasHyphen && <span>{"-"}</span>}
+        {hasSlash && <span>{"/"}</span>}
+        {secondPart && secondPart}
+        {!hasHyphen && !hasSlash && title}
+      </h2>
 
       <Knonwledges>
         <div>

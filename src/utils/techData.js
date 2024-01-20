@@ -6,13 +6,25 @@ import {
   IoLogoHtml5,
   IoLogoJavascript,
 } from "react-icons/io5";
-import { BiLogoTypescript } from "react-icons/bi";
+import { BiLogoTypescript, BiLogoGithub, BiLogoGit } from "react-icons/bi";
 import {
   SiSqlite,
   SiStyledcomponents,
   SiFlask,
   SiDjango,
   SiTailwindcss,
+  SiNextdotjs,
+  SiNestjs,
+  SiExpress,
+  SiAmazonaws,
+  SiGooglecloud,
+  SiDocker,
+  SiOracle,
+  SiRedis,
+  SiGoogleappsscript,
+  SiRuby,
+  SiJenkins,
+  SiKubernetes,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
@@ -57,6 +69,12 @@ export const techData = {
       status: "experience",
     },
     {
+      name: "Next.js",
+      icon: SiNextdotjs,
+      backgroundColor: "#000000",
+      status: "want",
+    },
+    {
       name: "TypeScript",
       icon: BiLogoTypescript,
       backgroundColor: "#3178C6",
@@ -71,13 +89,25 @@ export const techData = {
       status: "experience",
     },
     {
+      name: "Express",
+      icon: SiExpress,
+      backgroundColor: "#8CC84B",
+      status: "experience",
+    },
+    {
+      name: "NestJS",
+      icon: SiNestjs,
+      backgroundColor: "#E0234E",
+      status: "want",
+    },
+    {
       name: "Python",
       icon: IoLogoPython,
       backgroundColor: "#306998",
       status: "experience",
     },
     {
-      name: "MongoDB",
+      name: "Flask",
       icon: SiFlask,
       backgroundColor: "#000000",
       status: "experience",
@@ -92,6 +122,12 @@ export const techData = {
       name: "GoLang",
       icon: FaGolang,
       backgroundColor: "#00ADD8",
+      status: "learning",
+    },
+    {
+      name: "Ruby",
+      icon: SiRuby,
+      backgroundColor: "#CC0000",
       status: "want",
     },
   ],
@@ -109,9 +145,71 @@ export const techData = {
       status: "experience",
     },
     {
+      name: "Oracle",
+      icon: SiOracle,
+      backgroundColor: "#F80000",
+      status: "want",
+    },
+    {
       name: "MongoDB",
       icon: SiMongodb,
       backgroundColor: "#13AA52",
+      status: "learning",
+    },
+    {
+      name: "Redis",
+      icon: SiRedis,
+      backgroundColor: "#DC382D",
+      status: "want",
+    },
+  ],
+  others: [
+    {
+      name: "Google Apps Script",
+      icon: SiGoogleappsscript,
+      backgroundColor: "#4285F4",
+      status: "experience",
+    },
+    {
+      name: "Git",
+      icon: BiLogoGit,
+      backgroundColor: "#F05032",
+      status: "experience",
+    },
+    {
+      name: "Github",
+      icon: BiLogoGithub,
+      backgroundColor: "#211F1F",
+      status: "experience",
+    },
+    {
+      name: "AWS",
+      icon: SiAmazonaws,
+      backgroundColor: "#FF9900",
+      status: "want",
+    },
+    {
+      name: "Google Cloud",
+      icon: SiGooglecloud,
+      backgroundColor: "#4285F4",
+      status: "want",
+    },
+    {
+      name: "Docker",
+      icon: SiDocker,
+      backgroundColor: "#2496ED",
+      status: "learning",
+    },
+    {
+      name: "Jenkins",
+      icon: SiJenkins,
+      backgroundColor: "#D24939",
+      status: "want",
+    },
+    {
+      name: "Kubernetes",
+      icon: SiKubernetes,
+      backgroundColor: "#326CE5",
       status: "want",
     },
   ],
