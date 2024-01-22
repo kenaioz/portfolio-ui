@@ -47,14 +47,14 @@ export function Home() {
   async function sendContact(e) {
     e.preventDefault();
 
-    // if (
-    //   !contactData.name ||
-    //   !contactData.email ||
-    //   !contactData.subject ||
-    //   !contactData.content
-    // ) {
-    //   return alert("Todos os campos precisam estar preenchidos");
-    // }
+    if (
+      !contactData.name ||
+      !contactData.email ||
+      !contactData.subject ||
+      !contactData.content
+    ) {
+      return alert("Todos os campos precisam estar preenchidos");
+    }
 
     try {
       await sendEmail(contactData);

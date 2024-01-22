@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import {
   Container,
   ContainerCard,
@@ -13,6 +15,10 @@ export function ProjectsCardsWrapper({ children }) {
   return <Container>{children}</Container>;
 }
 
+ProjectsCardsWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export function ProjectsCards({
   image,
   title,
@@ -23,7 +29,7 @@ export function ProjectsCards({
 }) {
   return (
     <ContainerCard>
-      <img src={image ? image : Placeholder} alt="Imagem do Projeto" />
+      <img src={image || Placeholder} alt="Imagem do Projeto" />
 
       <div>
         <div>
@@ -85,10 +91,33 @@ export function ProjectsCards({
   );
 }
 
+ProjectsCards.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  frontend: PropTypes.shape({
+    gitLink: PropTypes.string,
+    techs: PropTypes.arrayOf(PropTypes.string),
+  }),
+  backend: PropTypes.shape({
+    gitLink: PropTypes.string,
+    techs: PropTypes.arrayOf(PropTypes.string),
+  }),
+};
+
 export function TechsChip({ title }) {
   return <ContainerChip>{title}</ContainerChip>;
 }
 
+TechsChip.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
 export function ChipWrapper({ children }) {
   return <ContainerChipWrapper>{children}</ContainerChipWrapper>;
 }
+
+ChipWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+};

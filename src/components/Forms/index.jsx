@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import {
   ContainerInput,
@@ -7,7 +8,7 @@ import {
   ContainerButton,
 } from "./styles";
 
-export function Input({ id, label, icon: Icon, placeholder, value, onChange }) {
+export function Input({ id, label, placeholder, value, onChange }) {
   const [inputValue, setInputValue] = useState(value || "");
 
   return (
@@ -27,14 +28,16 @@ export function Input({ id, label, icon: Icon, placeholder, value, onChange }) {
   );
 }
 
-export function TextArea({
-  id,
-  label,
-  icon: Icon,
-  placeholder,
-  value,
-  onChange,
-}) {
+Input.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.elementType,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
+
+export function TextArea({ id, label, placeholder, value, onChange }) {
   const [texteAreaValue, setTexteAreaValue] = useState(value || "");
 
   return (
@@ -54,6 +57,19 @@ export function TextArea({
   );
 }
 
+TextArea.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.elementType,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
+
 export function Button({ title, ...rest }) {
   return <ContainerButton {...rest}>{title}</ContainerButton>;
 }
+
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+};
