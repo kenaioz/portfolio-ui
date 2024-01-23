@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    image: "/public/projects/food-explorer.png",
+    image: "/projects/food-explorer.png",
     name: "FoodExplorer",
     description:
       "Esse projeto foi a conclusão do curso Explorer da Rocketseat, que visa simular um cardápio com os pratos criados, possibilidade de realizar um pedido com os pratos selecionados e perfis de acessos com autorização para criar e editar esses pratos.",
