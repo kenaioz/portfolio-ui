@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoint";
 
 export const Container = styled.div`
   display: flex;
@@ -8,6 +9,10 @@ export const Container = styled.div`
 
   > div:nth-child(even) {
     flex-direction: row-reverse;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -15,10 +20,26 @@ export const ContainerCard = styled.div`
   display: flex;
   gap: 32px;
 
-  img {
-    align-self: center;
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    flex-direction: column;
+  }
 
+  img {
+    width: 500px;
+    align-self: center;
     border-radius: 15px;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+      width: 300px;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      width: 500px;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      width: 100%;
+    }
   }
 
   > div {
@@ -26,6 +47,10 @@ export const ContainerCard = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      width: 100%;
+    }
   }
 
   h1,
@@ -44,6 +69,10 @@ export const ContainerCard = styled.div`
   border-radius: 15px;
   padding: 32px;
 
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    padding: 16px;
+  }
+
   .stacks {
     display: flex;
     justify-content: space-between;
@@ -56,7 +85,7 @@ export const ContainerCard = styled.div`
     }
 
     .stack {
-      width: 230px;
+      width: 100%;
     }
 
     a {

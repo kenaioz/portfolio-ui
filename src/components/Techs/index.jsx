@@ -35,7 +35,7 @@ export function TechSection({ title, technologies }) {
 
       <Knonwledges>
         <div>
-          <h3>Tenho experiencia</h3>
+          <h3>Tenho experiência</h3>
           <ContainerIconWrapper>
             {technologies &&
               technologies.map((tech, index) => {

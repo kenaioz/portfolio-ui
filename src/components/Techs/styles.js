@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoint";
 
 export const Container = styled.div`
   display: flex;
@@ -10,13 +11,27 @@ export const Knonwledges = styled.div`
   display: flex;
   justify-content: center;
   gap: 32px;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    flex-direction: column;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ContainerTechSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-bottom: 32px;
+  gap: 12px;
+  margin-bottom: 2rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    align-items: center;
+  }
 
   > h2 {
     color: ${({ theme }) => theme.COLORS.RED};
@@ -33,10 +48,15 @@ export const ContainerTechSection = styled.div`
 
 export const ContainerIconWrapper = styled.div`
   display: flex;
+  justify-content: center;
   gap: 12px;
   width: 150px;
   flex-wrap: wrap;
-  padding: 0 15px;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    width: 100%;
+    gap: 6px;
+  }
 `;
 
 export const ContainerIcons = styled.div`
@@ -90,5 +110,12 @@ export const ContainerIcons = styled.div`
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background-color: ${({ $bgColor }) => $bgColor};
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      padding: 10px;
+      svg {
+        font-size: 20;
+      }
+    }
   }
 `;

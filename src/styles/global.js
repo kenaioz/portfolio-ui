@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { DEVICE_BREAKPOINTS } from "./deviceBreakpoint";
 
 export default createGlobalStyle`
   * {
@@ -19,16 +20,44 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     outline: none;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+      font-size: 14px;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      font-size: 12px;
+    }
+
   }
 
   h1 {
     font-size: 2rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+      font-size: 1.75rem;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      font-size: 1.5rem;
+    }
+
+  }
+
+  h2 {
+    
+  }
+
+  h3 {
+    
   }
 
   h1, h2, h3, label {
     font-family: 'Poppins', sans-serif;
     outline: none;
   }
+
+
 
   ul, ol {
     list-style: none;

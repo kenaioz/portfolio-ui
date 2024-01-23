@@ -87,7 +87,9 @@ export function Home() {
                 </div>
                 <p>
                   Sou um desenvolvedor FullStack Jr. trabalho na área de
-                  tecnologia há 4 anos, 2 como desenvolvedor.
+                  tecnologia há mais de 4 anos, 2 anos como desenvolvedor.
+                  Comprometido com resoluções de problemas e ansioso por mais
+                  desafios e crescimento profissional.
                 </p>
               </div>
               <SocialLinks />
@@ -97,6 +99,7 @@ export function Home() {
         <AboutMe id="about">
           <Layout>
             <img src={ProfileSVG} alt="About Me" />
+
             <div className="textWrapper">
               <h1>
                 <span>Sobre</span> Mim

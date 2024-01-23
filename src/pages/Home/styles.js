@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoint";
 
 export const Container = styled.div`
   position: relative;
@@ -7,27 +8,49 @@ export const Container = styled.div`
 
 export const PageContent = styled.div`
   padding: 5.6rem 0 19rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    padding: 5.6rem 0 25.75rem;
+  }
 `;
 
 export const Intro = styled.div`
   scroll-margin-top: 90px;
   height: fit-content;
-  padding: 200px 120px;
+  padding: 10.625rem 0;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    padding: 180px 0;
+  }
 
   > div {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 3.125rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      flex-direction: column;
+    }
   }
 
   img {
-    height: 300px;
+    width: 300px;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+      width: 250px;
+    }
   }
 
   .infos {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem;
+    width: 32rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      width: 100%;
+    }
 
     .titleWrapper {
       display: flex;
@@ -35,7 +58,6 @@ export const Intro = styled.div`
 
       h2 {
         font-size: 20px;
-        line-height: 15px;
       }
       h1 {
         color: ${({ theme }) => theme.COLORS.RED};
@@ -44,33 +66,13 @@ export const Intro = styled.div`
         }
       }
     }
-
-    p {
-    }
-
-    .icons {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        color: ${({ theme }) => theme.COLORS.WHITE};
-        background-color: ${({ theme }) => theme.COLORS.RED};
-        padding: 10px;
-        border-radius: 50%;
-      }
-    }
   }
 `;
 
 export const AboutMe = styled.div`
-  scroll-margin-top: 85px;
+  scroll-margin-top: 80px;
   height: fit-content;
-  padding: 100px 0;
+  padding: 6.25rem 0;
   background-color: ${({ theme }) => theme.COLORS.RED};
   color: ${({ theme }) => theme.COLORS.WHITE};
 
@@ -78,6 +80,10 @@ export const AboutMe = styled.div`
     display: flex;
     align-items: center;
     gap: 50px;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+      flex-direction: column;
+    }
   }
 
   h1 {
@@ -88,35 +94,60 @@ export const AboutMe = styled.div`
 
   img {
     width: 500px;
+    flex-shrink: 0;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      width: 300px;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+      width: 250px;
+    }
   }
 `;
 
 export const Techs = styled.div`
-  scroll-margin-top: 85px;
+  scroll-margin-top: 80px;
   height: fit-content;
-  padding: 100px 0;
+  padding: 6.25rem 0;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
 
   > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 3.125rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      flex-direction: column-reverse;
+    }
 
     h1 {
-      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+        text-align: center;
+      }
     }
   }
 
   img {
     width: 500px;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+      width: 300px;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+      width: 250px;
+    }
   }
 `;
 
 export const Projects = styled.div`
-  scroll-margin-top: 85px;
+  scroll-margin-top: 80px;
   height: fit-content;
-  padding: 100px 0;
+  padding: 6.25rem 0;
   background-color: ${({ theme }) => theme.COLORS.COAL};
   color: ${({ theme }) => theme.COLORS.WHITE};
 
@@ -124,30 +155,31 @@ export const Projects = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 3.125rem;
 
     > div {
       > h1 {
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
       }
     }
-  }
-
-  img {
-    width: 500px;
   }
 `;
 
 export const Contact = styled.section`
-  scroll-margin-top: 85px;
+  scroll-margin-top: 80px;
   height: fit-content;
-  padding: 100px 0;
+  padding: 6.25rem 0;
 
   > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 3.125rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      flex-direction: column;
+      justify-content: center;
+    }
 
     fieldset {
       border: none;
@@ -155,11 +187,23 @@ export const Contact = styled.section`
 
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 1rem;
+
+      @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+        width: 300px;
+      }
     }
   }
 
   img {
     width: 500px;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.XL}) {
+      width: 300px;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      display: none;
+    }
   }
 `;

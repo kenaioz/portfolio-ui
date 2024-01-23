@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoint";
 
 export const Container = styled.div`
   position: fixed;
@@ -24,6 +25,11 @@ export const HeaderContent = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      display: none;
+    }
+
     li {
       &:after {
         display: block;
@@ -38,6 +44,15 @@ export const HeaderContent = styled.div`
       }
     }
   }
+
+  svg {
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      display: block;
+    }
+  }
 `;
 
 export const ContainerNavList = styled.ul`
@@ -45,6 +60,10 @@ export const ContainerNavList = styled.ul`
   align-items: center;
 
   gap: 16px;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    flex-direction: column;
+  }
 
   li {
     cursor: pointer;
@@ -59,4 +78,58 @@ export const ButtonCV = styled.a`
   border: 1px solid;
   border-radius: 25px;
   padding: 10px 25px;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    display: none;
+  }
+`;
+
+export const ContainerSideMenu = styled.aside`
+  background-color: ${({ theme }) => theme.COLORS.COAL};
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  top: 70px;
+
+  transform: translateX(100%);
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    position: absolute;
+    z-index: 1000;
+
+    transition: transform 0.3s ease-in-out;
+
+    &[data-menu-is-open="true"] {
+      transform: translateX(0);
+    }
+  }
+`;
+
+export const LayoutSideMenu = styled.div`
+  padding: 64px 32px;
+
+  color: ${({ theme }) => theme.COLORS.WHITE};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+
+  ul {
+    flex-direction: column;
+    margin-bottom: 32px;
+    li {
+      text-align: center;
+
+      font-size: 24px;
+      padding: 10px;
+      border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY};
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 16px;
+  }
 `;

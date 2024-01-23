@@ -17,6 +17,7 @@ export const ContainerInput = styled.input`
   border-radius: 8px;
 
   height: 50px;
+  width: 100%;
   padding: 12px 14px;
 `;
 
