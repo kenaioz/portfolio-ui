@@ -17,7 +17,7 @@ export const PageContent = styled.div`
 export const Intro = styled.div`
   scroll-margin-top: 90px;
   height: fit-content;
-  padding: 10.625rem 0;
+  padding: 200px 0;
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
     padding: 180px 0;

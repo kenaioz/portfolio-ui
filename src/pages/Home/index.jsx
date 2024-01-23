@@ -179,28 +179,28 @@ export function Home() {
                     id="name"
                     label="Nome"
                     value={contactData.name}
-                    placeholder="Insira seu nome"
+                    placeholder="Seu nome"
                     onChange={updateContactForms}
                   />
                   <Input
                     id="email"
                     label="Email"
                     value={contactData.email}
-                    placeholder="Insira seu Email"
+                    placeholder="E-mail para retorno"
                     onChange={updateContactForms}
                   />
                   <Input
                     id="subject"
                     label="Assunto"
                     value={contactData.subject}
-                    placeholder="Insira o assunto do email"
+                    placeholder="Assunto do E-mail"
                     onChange={updateContactForms}
                   />
                   <TextArea
                     id="content"
                     label="Mensagem"
                     value={contactData.content}
-                    placeholder="Insira o conteúdo do email"
+                    placeholder="Mensagem"
                     onChange={updateContactForms}
                   />
                   <Button title="Enviar E-Mail" onClick={sendContact} />
