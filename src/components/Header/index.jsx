@@ -66,6 +66,7 @@ export function NavList({ menuIsOpen, setMenuIsOpen }) {
       document.body.style.overflow = "auto";
     }
 
+
     const element = document.getElementById(e.target.dataset.section);
     element.scrollIntoView({
       behavior: "smooth",

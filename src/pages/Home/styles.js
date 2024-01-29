@@ -58,11 +58,13 @@ export const Intro = styled.div`
 
       h2 {
         font-size: 20px;
+        span {
+          color: ${({ theme }) => theme.COLORS.RED};
+        }
       }
       h1 {
-        color: ${({ theme }) => theme.COLORS.RED};
         span {
-          color: ${({ theme }) => theme.COLORS.BLACK};
+          color: ${({ theme }) => theme.COLORS.RED};
         }
       }
     }

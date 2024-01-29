@@ -80,9 +80,11 @@ export function Home() {
             <div className="infos">
               <div className="textContent">
                 <div className="titleWrapper">
-                  <h2>Olá, eu sou o</h2>
+                  <h2>
+                    <span>Olá</span>, eu sou o
+                  </h2>
                   <h1>
-                    Silvio <span>Cesar</span>
+                    <span>Silvio</span> Cesar
                   </h1>
                 </div>
                 <p>
