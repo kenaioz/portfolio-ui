@@ -107,19 +107,23 @@ export function Home() {
                 <span>Sobre</span> Mim
               </h1>
               <p>
-                Desenvolvo desde 2016 quando tinha 15 anos, mas quando entrei
-                para o mercado de trabalho na área de suporte help desk acabei
-                decidindo por conta própria que programação não era pra mim, mas
-                naturalmente me reencontrei nesse caminho na necessidade de
-                automatizar minhas tarefas e de criar aplicações que ajudariam
-                meu time.
+                Desde 2016, aos 15 anos, iniciei minha jornada no mundo do
+                desenvolvimento. No entanto, ao ingressar no mercado de trabalho
+                na área de suporte help desk, inicialmente, julguei que a
+                programação não era minha vocação. Foi apenas mais tarde, por
+                conta própria, que redescobri meu amor pela programação,
+                impulsionado pela necessidade de automatizar tarefas diárias e
+                criar aplicações que otimizassem as operações da minha equipe.
                 <br />
                 <br />
-                Profissionalmente desenvolvo desde 2021, iniciei com automações
-                de tarefas que iam de integrar ferramentas Google como por
-                exemplo Gmail + Google Sheets e usando um Arduino para
-                automatizar parefas manuais até liderar o desenvolver de
-                aplicações completas.
+                Profissionalmente, minha trajetória como desenvolvedor teve
+                início em 2021. Comecei com automações de tarefas, abrangendo
+                desde a integração de ferramentas Google, como Gmail + Google
+                Sheets, até a utilização de Arduino para automatizar processos
+                manuais. Ao longo do tempo, evolui para liderar o
+                desenvolvimento de aplicações completas, consolidando minha
+                paixão por transformar desafios em soluções tecnológicas
+                inovadoras.
               </p>
             </div>
           </Layout>
