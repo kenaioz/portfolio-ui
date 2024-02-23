@@ -5,7 +5,12 @@ import {
   Knonwledges,
   ContainerIconWrapper,
   ContainerIcons,
+  TitleIconWrapper,
 } from "./styles";
+
+import { Tooltip } from "../Tooltip";
+
+import { IoInformationCircleOutline } from "react-icons/io5";
 
 export function TechSection({ title, technologies }) {
   const hasHyphen = title.includes("-");
@@ -35,7 +40,13 @@ export function TechSection({ title, technologies }) {
 
       <Knonwledges>
         <div>
-          <h3>Tenho experiência</h3>
+          <TitleIconWrapper>
+            <h3>Tenho experiência</h3>
+            <Tooltip content="Já usei em experiências profissionais ou em projetos pessoais mais complexos">
+              <IoInformationCircleOutline />
+            </Tooltip>
+          </TitleIconWrapper>
+
           <ContainerIconWrapper>
             {technologies &&
               technologies.map((tech, index) => {
@@ -54,7 +65,12 @@ export function TechSection({ title, technologies }) {
         </div>
 
         <div>
-          <h3>Aprendendo</h3>
+          <TitleIconWrapper>
+            <h3>Aprendendo</h3>
+            <Tooltip content="Já usei em projetos pessoais pequenos ou em exercícios para praticar">
+              <IoInformationCircleOutline />
+            </Tooltip>
+          </TitleIconWrapper>
           <ContainerIconWrapper>
             {technologies &&
               technologies.map((tech, index) => {
@@ -73,7 +89,12 @@ export function TechSection({ title, technologies }) {
         </div>
 
         <div>
-          <h3>Quero aprender</h3>
+          <TitleIconWrapper>
+            <h3>Quero aprender</h3>
+            <Tooltip content="Tecnologias que tenho interesse em dominar">
+              <IoInformationCircleOutline />
+            </Tooltip>
+          </TitleIconWrapper>
           <ContainerIconWrapper>
             {technologies &&
               technologies.map((tech, index) => {

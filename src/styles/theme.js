@@ -8,5 +8,7 @@ export default {
     RED: "#EF1D26",
 
     GRAY: "#E4E4E4",
+
+    TOOLTIPBG: "#292C33",
   },
 };

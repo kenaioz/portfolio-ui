@@ -21,7 +21,7 @@ export const projectsData = [
       "Todo mundo que gosta de futebol tem as suas manias, você já parou pra pensar se as suas estão certas? Pensando nisso fiz um projeto para registrar todos os jogos do seu time informando contra quem, onde e com qual camisa, com essas informações vamos te informar qual combinação da mais sorte ao seu time.",
     frontend: {
       gitLink: "",
-      techs: ["JavaScript", "React", "Styled-Components"],
+      techs: ["TypeScript", "React", "Styled-Components"],
     },
     backend: {
       gitLink: "",

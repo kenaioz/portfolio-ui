@@ -39,11 +39,6 @@ export const ContainerTechSection = styled.div`
       color: ${({ theme }) => theme.COLORS.BLACK};
     }
   }
-
-  h3 {
-    text-align: center;
-    margin-bottom: 12px;
-  }
 `;
 
 export const ContainerIconWrapper = styled.div`
@@ -118,4 +113,12 @@ export const ContainerIcons = styled.div`
       }
     }
   }
+`;
+
+export const TitleIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-bottom: 12px;
 `;
