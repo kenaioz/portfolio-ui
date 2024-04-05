@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoint";
 
 export const ContainerTooltip = styled.div`
   display: flex;
@@ -15,12 +16,19 @@ export const TooltipWrapper = styled.div`
   padding: 6px;
   color: ${({ theme }) => theme.COLORS.WHITE};
   background: ${({ theme }) => theme.COLORS.COAL};
-  font-size: 14px;
   line-height: 1;
   z-index: 100;
   text-align: center;
   white-space: nowrap;
+
+  min-width: 250px;
+  width: fit-content;
   top: -40px;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    white-space: normal;
+    top: -50px;
+  }
 
   &::before {
     content: " ";

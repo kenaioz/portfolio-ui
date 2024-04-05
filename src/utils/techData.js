@@ -6,7 +6,12 @@ import {
   IoLogoHtml5,
   IoLogoJavascript,
 } from "react-icons/io5";
-import { BiLogoTypescript, BiLogoGithub, BiLogoGit } from "react-icons/bi";
+import {
+  BiLogoTypescript,
+  BiLogoGithub,
+  BiLogoGit,
+  BiLogoPostgresql,
+} from "react-icons/bi";
 import {
   SiSqlite,
   SiStyledcomponents,
@@ -136,6 +141,12 @@ export const techData = {
       name: "MySQL",
       icon: GrMysql,
       backgroundColor: "#4479A1",
+      status: "experience",
+    },
+    {
+      name: "PostgreSQL",
+      icon: BiLogoPostgresql,
+      backgroundColor: "#699ECA",
       status: "experience",
     },
     {

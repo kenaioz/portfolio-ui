@@ -43,7 +43,7 @@ export function TechSection({ title, technologies }) {
           <TitleIconWrapper>
             <h3>Tenho experiência</h3>
             <Tooltip content="Já usei em experiências profissionais ou em projetos pessoais mais complexos">
-              <IoInformationCircleOutline />
+              <IoInformationCircleOutline size={18} />
             </Tooltip>
           </TitleIconWrapper>
 
@@ -68,7 +68,7 @@ export function TechSection({ title, technologies }) {
           <TitleIconWrapper>
             <h3>Aprendendo</h3>
             <Tooltip content="Já usei em projetos pessoais pequenos ou em exercícios para praticar">
-              <IoInformationCircleOutline />
+              <IoInformationCircleOutline size={18} />
             </Tooltip>
           </TitleIconWrapper>
           <ContainerIconWrapper>
@@ -91,8 +91,8 @@ export function TechSection({ title, technologies }) {
         <div>
           <TitleIconWrapper>
             <h3>Quero aprender</h3>
-            <Tooltip content="Tecnologias que tenho interesse em dominar">
-              <IoInformationCircleOutline />
+            <Tooltip content="Tecnologias que tenho interesse em aprender">
+              <IoInformationCircleOutline size={18} />
             </Tooltip>
           </TitleIconWrapper>
           <ContainerIconWrapper>
