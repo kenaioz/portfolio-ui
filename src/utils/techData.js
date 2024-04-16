@@ -30,10 +30,11 @@ import {
   SiRuby,
   SiJenkins,
   SiKubernetes,
+  SiGithubactions,
+  SiMongodb,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
-import { SiMongodb } from "react-icons/si";
 
 export const techData = {
   frontend: [
@@ -68,6 +69,12 @@ export const techData = {
       status: "experience",
     },
     {
+      name: "TypeScript",
+      icon: BiLogoTypescript,
+      backgroundColor: "#3178C6",
+      status: "experience",
+    },
+    {
       name: "ReactJS",
       icon: IoLogoReact,
       backgroundColor: "#61DAFB",
@@ -78,12 +85,6 @@ export const techData = {
       icon: SiNextdotjs,
       backgroundColor: "#000000",
       status: "want",
-    },
-    {
-      name: "TypeScript",
-      icon: BiLogoTypescript,
-      backgroundColor: "#3178C6",
-      status: "learning",
     },
   ],
   backend: [
@@ -192,6 +193,12 @@ export const techData = {
       icon: BiLogoGithub,
       backgroundColor: "#211F1F",
       status: "experience",
+    },
+    {
+      name: "Github Actions",
+      icon: SiGithubactions,
+      backgroundColor: "#211F1F",
+      status: "learning",
     },
     {
       name: "AWS",
