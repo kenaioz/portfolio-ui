@@ -10,7 +10,7 @@ export const projectsData = [
     },
     backend: {
       gitLink: "https://github.com/kenaioz/food-explorer-api",
-      techs: ["Node.js", "Express"],
+      techs: ["Node.js", "Express", "SQLite"],
     },
     status: "Finalizado",
   },
@@ -20,12 +20,12 @@ export const projectsData = [
     description:
       "Todo mundo que gosta de futebol tem as suas manias, você já parou pra pensar se as suas estão certas? Pensando nisso fiz um projeto para registrar todos os jogos do seu time informando contra quem, onde e com qual camisa, com essas informações vamos te informar qual combinação da mais sorte ao seu time.",
     frontend: {
-      gitLink: "",
+      gitLink: "https://github.com/kenaioz/futsuperstition-ui",
       techs: ["TypeScript", "React", "Styled-Components"],
     },
     backend: {
       gitLink: "",
-      techs: ["Phyton", "Flask"],
+      techs: ["Phyton", "Flask", "PostgreSQL"],
     },
     status: "Em desenvolvimento",
   },
