@@ -128,7 +128,7 @@ export const techData = {
       name: "GoLang",
       icon: FaGolang,
       backgroundColor: "#00ADD8",
-      status: "learning",
+      status: "want",
     },
     {
       name: "Ruby",
