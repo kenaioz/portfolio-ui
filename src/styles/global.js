@@ -52,7 +52,7 @@ export default createGlobalStyle`
     
   }
 
-  h1, h2, h3, label {
+  h1, h2, h3, label, li {
     font-family: 'Poppins', sans-serif;
     outline: none;
   }

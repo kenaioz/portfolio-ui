@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   Container,
   PageContent,
+  TitleTextWrapper,
   Intro,
   AboutMe,
   Techs,
@@ -78,7 +79,7 @@ export function Home() {
             <img src={profilePic} alt="Imagem de Perfil" />
 
             <div className="infos">
-              <div className="textContent">
+              <div>
                 <div className="titleWrapper">
                   <h2>
                     <span>Olá</span>, eu sou o
@@ -102,7 +103,7 @@ export function Home() {
           <Layout>
             <img src={ProfileSVG} alt="About Me" />
 
-            <div className="textWrapper">
+            <div>
               <h1>
                 <span>Sobre</span> Mim
               </h1>
@@ -130,7 +131,7 @@ export function Home() {
         </AboutMe>
         <Techs id="techs">
           <Layout>
-            <div className="textWrapper">
+            <div>
               <h1>Tecnologias</h1>
               <div>
                 <TechSection
@@ -156,8 +157,18 @@ export function Home() {
         </Techs>
         <Projects id="projects">
           <Layout>
-            <div className="textWrapper">
-              <h1>Projetos</h1>
+            <div>
+              <TitleTextWrapper>
+                <h1>Projetos</h1>
+                <span>
+                  Aqui, você encontrará atualizações frequentes dos meus
+                  principais projetos, incluindo trabalhos pessoais que serão
+                  usadas por mim, de conclusão de cursos, freelas, e etc. Não
+                  incluirei projetos menores que foram desenvolvidos apenas para
+                  prática e que nunca verão um usuário na vida.
+                </span>
+              </TitleTextWrapper>
+
               <ProjectsCardsWrapper>
                 {projectsData.map((project, index) => (
                   <ProjectsCards
@@ -176,7 +187,7 @@ export function Home() {
         </Projects>
         <Contact id="contact">
           <Layout>
-            <div className="textWrapper">
+            <div>
               <form id="contact-us">
                 <fieldset>
                   <h1>Entre em contato</h1>

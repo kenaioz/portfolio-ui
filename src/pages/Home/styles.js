@@ -14,6 +14,14 @@ export const PageContent = styled.div`
   }
 `;
 
+export const TitleTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1096px;
+
+  margin-bottom: 1rem;
+`;
+
 export const Intro = styled.div`
   scroll-margin-top: 90px;
   height: fit-content;
@@ -125,8 +133,6 @@ export const Techs = styled.div`
     }
 
     h1 {
-      margin-bottom: 0.5rem;
-
       @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
         text-align: center;
       }
