@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -31,6 +32,8 @@ import { projectsData } from "../../utils/projects.js";
 import { sendEmail } from "../../services/emailAPI.js";
 
 export function Home() {
+  const { t, i18n } = useTranslation();
+
   const [contactData, setContactData] = useState({
     name: "",
     email: "",
@@ -82,18 +85,16 @@ export function Home() {
               <div>
                 <div className="titleWrapper">
                   <h2>
-                    <span>Olá</span>, eu sou o
+                    <span>
+                      {t("section.introduction.greetings.first_word")}
+                    </span>
+                    {t("section.introduction.greetings.rest")}
                   </h2>
                   <h1>
                     <span>Silvio</span> Cesar
                   </h1>
                 </div>
-                <p>
-                  Sou um desenvolvedor FullStack Jr. trabalho na área de
-                  tecnologia há mais de 4 anos, 2 anos como desenvolvedor.
-                  Comprometido com resoluções de problemas e ansioso por mais
-                  desafios e crescimento profissional.
-                </p>
+                <p>{t("section.introduction.content")}</p>
               </div>
               <SocialLinks />
             </div>
@@ -105,26 +106,14 @@ export function Home() {
 
             <div>
               <h1>
-                <span>Sobre</span> Mim
+                <span>{t("section.about.first_word")}</span>
+                {t("section.about.rest")}
               </h1>
               <p>
-                Desde 2016, aos 15 anos, iniciei minha jornada no mundo do
-                desenvolvimento. No entanto, ao ingressar no mercado de trabalho
-                na área de suporte help desk, inicialmente, julguei que a
-                programação não era minha vocação. Foi apenas mais tarde, por
-                conta própria, que redescobri meu amor pela programação,
-                impulsionado pela necessidade de automatizar tarefas diárias e
-                criar aplicações que otimizassem as operações da minha equipe.
+                {t("section.about.content.first_paragraph")}
                 <br />
                 <br />
-                Profissionalmente, minha trajetória como desenvolvedor teve
-                início em 2021. Comecei com automações de tarefas, abrangendo
-                desde a integração de ferramentas Google, como Gmail + Google
-                Sheets, até a utilização de Arduino para automatizar processos
-                manuais. Ao longo do tempo, evolui para liderar o
-                desenvolvimento de aplicações completas, consolidando minha
-                paixão por transformar desafios em soluções tecnológicas
-                inovadoras.
+                {t("section.about.content.second_paragraph")}
               </p>
             </div>
           </Layout>
@@ -132,7 +121,7 @@ export function Home() {
         <Techs id="techs">
           <Layout>
             <div>
-              <h1>Tecnologias</h1>
+              <h1>{t("section.techs.title")}</h1>
               <div>
                 <TechSection
                   title="Front-End"
@@ -147,7 +136,7 @@ export function Home() {
                   technologies={techData.database}
                 />
                 <TechSection
-                  title="Outras Tecnologias/Ferramentas"
+                  title={t("section.techs.others")}
                   technologies={techData.others}
                 />
               </div>
@@ -159,14 +148,8 @@ export function Home() {
           <Layout>
             <div>
               <TitleTextWrapper>
-                <h1>Projetos</h1>
-                <span>
-                  Aqui, você encontrará atualizações frequentes dos meus
-                  principais projetos, incluindo trabalhos pessoais que serão
-                  usadas por mim, de conclusão de cursos, freelas, e etc. Não
-                  incluirei projetos menores que foram desenvolvidos apenas para
-                  prática e que nunca verão um usuário na vida.
-                </span>
+                <h1>{t("section.projects.title")}</h1>
+                <span>{t("section.projects.content")}</span>
               </TitleTextWrapper>
 
               <ProjectsCardsWrapper>
@@ -175,8 +158,16 @@ export function Home() {
                     key={index}
                     image={project.image}
                     title={project.name}
-                    description={project.description}
-                    status={project.status}
+                    description={
+                      i18n.language === "pt-BR"
+                        ? project.description.pt
+                        : project.description.en
+                    }
+                    status={
+                      i18n.language === "pt-BR"
+                        ? project.status.pt
+                        : project.status.en
+                    }
                     frontend={project.frontend}
                     backend={project.backend}
                   />
@@ -190,37 +181,44 @@ export function Home() {
             <div>
               <form id="contact-us">
                 <fieldset>
-                  <h1>Entre em contato</h1>
+                  <h1>{t("section.contact.title")}</h1>
 
                   <Input
                     id="name"
-                    label="Nome"
+                    label={t("section.contact.inputs.name.label")}
                     value={contactData.name}
-                    placeholder="Seu nome"
+                    placeholder={t("section.contact.inputs.name.placeholder")}
                     onChange={updateContactForms}
                   />
                   <Input
                     id="email"
-                    label="Email"
+                    label={t("section.contact.inputs.email.label")}
                     value={contactData.email}
-                    placeholder="E-mail para retorno"
+                    placeholder={t("section.contact.inputs.email.placeholder")}
                     onChange={updateContactForms}
                   />
                   <Input
                     id="subject"
-                    label="Assunto"
+                    label={t("section.contact.inputs.subject.label")}
                     value={contactData.subject}
-                    placeholder="Assunto do E-mail"
+                    placeholder={t(
+                      "section.contact.inputs.subject.placeholder"
+                    )}
                     onChange={updateContactForms}
                   />
                   <TextArea
                     id="content"
-                    label="Mensagem"
+                    label={t("section.contact.inputs.content.label")}
                     value={contactData.content}
-                    placeholder="Mensagem"
+                    placeholder={t(
+                      "section.contact.inputs.content.placeholder"
+                    )}
                     onChange={updateContactForms}
                   />
-                  <Button title="Enviar E-Mail" onClick={sendContact} />
+                  <Button
+                    title={t("section.contact.inputs.send")}
+                    onClick={sendContact}
+                  />
                 </fieldset>
               </form>
             </div>

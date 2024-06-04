@@ -5,9 +5,11 @@ import {
   Container,
   HeaderContent,
   ContainerNavList,
+  EndDiv,
   ButtonCV,
   ContainerSideMenu,
   LayoutSideMenu,
+  EndDivSideMenu,
 } from "./styles";
 
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -15,6 +17,8 @@ import { FiX } from "react-icons/fi";
 
 import { Logo } from "../Logo";
 import { Layout } from "../Layout";
+import { LangSelect } from "../Language";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -27,7 +31,10 @@ export function Header() {
 
           <NavList />
 
-          <ButtonResume data-menu-is-open={menuIsOpen} />
+          <EndDiv>
+            <LangSelect />
+            <ButtonResume />
+          </EndDiv>
 
           {menuIsOpen ? (
             <FiX
@@ -52,7 +59,10 @@ export function Header() {
         <LayoutSideMenu>
           <NavList menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
 
-          <ButtonResume />
+          <EndDivSideMenu>
+            <LangSelect />
+            <ButtonResume />
+          </EndDivSideMenu>
         </LayoutSideMenu>
       </ContainerSideMenu>
     </Container>
@@ -60,12 +70,13 @@ export function Header() {
 }
 
 export function NavList({ menuIsOpen, setMenuIsOpen }) {
+  const { t } = useTranslation();
+
   function handleOption(e) {
     if (menuIsOpen) {
       setMenuIsOpen(false);
       document.body.style.overflow = "auto";
     }
-
 
     const element = document.getElementById(e.target.dataset.section);
     element.scrollIntoView({
@@ -76,19 +87,19 @@ export function NavList({ menuIsOpen, setMenuIsOpen }) {
   return (
     <ContainerNavList>
       <li data-section="intro" onClick={handleOption}>
-        Introdução
+        {t("section.introduction.title")}
       </li>
       <li data-section="about" onClick={handleOption}>
-        Sobre Mim
+        {t("section.about.title")}
       </li>
       <li data-section="techs" onClick={handleOption}>
-        Tecnologias
+        {t("section.techs.title")}
       </li>
       <li data-section="projects" onClick={handleOption}>
-        Projetos
+        {t("section.projects.title")}
       </li>
       <li data-section="contact" onClick={handleOption}>
-        Entre em contato
+        {t("section.contact.title")}
       </li>
     </ContainerNavList>
   );
@@ -100,13 +111,19 @@ NavList.propTypes = {
 };
 
 export function ButtonResume() {
+  const { t, i18n } = useTranslation();
+
   return (
     <ButtonCV
-      href="https://drive.google.com/file/d/1pEJgGdO9bXr6Nyz_3sn5x5KRhEiAWMIl/view?usp=drive_link"
+      href={
+        i18n.language === "pt-BR"
+          ? "https://drive.google.com/file/d/1pEJgGdO9bXr6Nyz_3sn5x5KRhEiAWMIl/view?usp=drive_link"
+          : "https://drive.google.com/file/d/1bZIoyNRWQdx2yWtTojPiOT4lM-Gvr4WK/view?usp=drive_link"
+      }
       rel="noreferrer"
       target="_blank"
     >
-      Abrir Currículo
+      {t("cv.button")}
     </ButtonCV>
   );
 }

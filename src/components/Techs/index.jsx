@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 import {
   ContainerTechSection,
@@ -13,6 +14,8 @@ import { Tooltip } from "../Tooltip";
 import { IoInformationCircleOutline } from "react-icons/io5";
 
 export function TechSection({ title, technologies }) {
+  const { t } = useTranslation();
+
   const hasHyphen = title.includes("-");
   const hasSlash = title.includes("/");
 
@@ -41,8 +44,8 @@ export function TechSection({ title, technologies }) {
       <Knonwledges>
         <div>
           <TitleIconWrapper>
-            <h3>Tenho experiência</h3>
-            <Tooltip content="Já usei em experiências profissionais ou em projetos pessoais mais complexos">
+            <h3>{t("section.techs.options.experience.title")}</h3>
+            <Tooltip content={t("section.techs.options.experience.tooltip")}>
               <IoInformationCircleOutline size={18} />
             </Tooltip>
           </TitleIconWrapper>
@@ -66,8 +69,8 @@ export function TechSection({ title, technologies }) {
 
         <div>
           <TitleIconWrapper>
-            <h3>Aprendendo</h3>
-            <Tooltip content="Já usei em projetos pessoais pequenos ou em exercícios para praticar">
+            <h3>{t("section.techs.options.learning.title")}</h3>
+            <Tooltip content={t("section.techs.options.learning.tooltip")}>
               <IoInformationCircleOutline size={18} />
             </Tooltip>
           </TitleIconWrapper>
@@ -90,8 +93,8 @@ export function TechSection({ title, technologies }) {
 
         <div>
           <TitleIconWrapper>
-            <h3>Quero aprender</h3>
-            <Tooltip content="Tecnologias que tenho interesse em aprender">
+            <h3>{t("section.techs.options.want.title")}</h3>
+            <Tooltip content={t("section.techs.options.want.tooltip")}>
               <IoInformationCircleOutline size={18} />
             </Tooltip>
           </TitleIconWrapper>

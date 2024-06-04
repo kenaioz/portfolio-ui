@@ -1,0 +1,71 @@
+{
+  "cv": {
+    "button": "Abrir Currículo",
+    "title": "Currículos"
+  },
+  "section": {
+    "introduction": {
+      "title": "Introdução",
+      "greetings": {
+        "full": "Olá, eu sou o",
+        "first_word": "Olá",
+        "rest": ", eu sou o"
+      },
+      "content": "Sou um desenvolvedor FullStack, trabalho na área de tecnologia há mais de 4 anos, 2 anos como desenvolvedor. Comprometido com resoluções de problemas e ansioso por mais desafios e crescimento profissional"
+    },
+    "about": {
+      "title": "Sobre Mim",
+      "first_word": "Sobre",
+      "rest": " Mim",
+      "content": {
+        "first_paragraph": "Desde 2016, aos 15 anos, iniciei minha jornada no mundo do desenvolvimento. No entanto, ao ingressar no mercado de trabalho na área de suporte help desk, inicialmente, julguei que a programação não era minha vocação. Foi apenas mais tarde, por conta própria, que redescobri meu amor pela programação, impulsionado pela necessidade de automatizar tarefas diárias e criar aplicações que otimizassem as operações da minha equipe.",
+        "second_paragraph": "Profissionalmente, minha trajetória como desenvolvedor teve início em 2021. Comecei com automações de tarefas, abrangendo desde a integração de ferramentas Google, como Gmail + Google Sheets, até a utilização de Arduino para automatizar processos manuais. Ao longo do tempo, evolui para liderar o desenvolvimento de aplicações completas, consolidando minha paixão por transformar desafios em soluções tecnológicas inovadoras."
+      }
+    },
+    "techs": {
+      "title": "Tecnologias",
+      "others": "Outras Tecnologias/Ferramentas",
+      "options": {
+        "experience": {
+          "title": "Tenho experiência",
+          "tooltip": "Já usei em experiências profissionais ou em projetos pessoais mais complexos"
+        },
+        "learning": {
+          "title": "Aprendendo",
+          "tooltip": "Já usei em projetos pessoais pequenos ou em exercícios para praticar"
+        },
+        "want": {
+          "title": "Quero aprender",
+          "tooltip": "Tecnologias que tenho interesse em aprender"
+        }
+      }
+    },
+    "projects": {
+      "title": "Projetos",
+      "content": "Aqui, você encontrará atualizações frequentes dos meus principais projetos, incluindo trabalhos pessoais que serão usadas por mim, de conclusão de cursos, freelas, e etc. Não incluirei projetos menores que foram desenvolvidos apenas para prática e que nunca verão um usuário na vida."
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "inputs": {
+        "name": {
+          "label": "Nome",
+          "placeholder": "Seu Nome"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Seu E-mail para retorno"
+        },
+        "subject": {
+          "label": "Assunto",
+          "placeholder": "Assunto do E-mail"
+        },
+        "content": {
+          "label": "Mensagem",
+          "placeholder": "Conteúdo do E-mail"
+        },
+        "send": "Enviar E-mail"
+      }
+    }
+  },
+  "footer": "© 2024 - Silvio Cesar - Em constante desenvolvimento"
+}

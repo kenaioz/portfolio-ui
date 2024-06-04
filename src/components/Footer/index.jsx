@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Container, FooterContent } from "./styles";
 
 import { SocialLinks } from "../SocialLinks";
@@ -7,6 +9,8 @@ import { Logo } from "../Logo";
 import { Layout } from "../Layout";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <Layout>
@@ -17,7 +21,7 @@ export function Footer() {
 
           <SocialLinks />
 
-          <span>© 2024 - Silvio Cesar - Em constante desenvolvimento</span>
+          <span>{t("footer")}</span>
         </FooterContent>
       </Layout>
     </Container>

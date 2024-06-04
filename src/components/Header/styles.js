@@ -45,7 +45,7 @@ export const HeaderContent = styled.div`
     }
   }
 
-  svg {
+  > svg {
     cursor: pointer;
     display: none;
 
@@ -53,6 +53,20 @@ export const HeaderContent = styled.div`
       display: block;
     }
   }
+`;
+
+export const EndDiv = styled.div`
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    display: none;
+  }
+`;
+
+export const EndDivSideMenu = styled.div`
+  display: flex;
+  gap: 16px;
 `;
 
 export const ContainerNavList = styled.ul`
@@ -76,12 +90,8 @@ export const ButtonCV = styled.a`
 
   background: none;
   border: 1px solid;
-  border-radius: 25px;
+  border-radius: 8px;
   padding: 10px 25px;
-
-  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-    display: none;
-  }
 `;
 
 export const ContainerSideMenu = styled.aside`

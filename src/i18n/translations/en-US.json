@@ -1,0 +1,71 @@
+{
+  "cv": {
+    "button": "Open Resume",
+    "title": "Resumes"
+  },
+  "section": {
+    "introduction": {
+      "title": "Introduction",
+      "greetings": {
+        "full": "Hi, i am",
+        "first_word": "Hi",
+        "rest": ", i am"
+      },
+      "content": "I am a FullStack developer, working in the technology field for over 4 years, 2 of which as a developer. Committed to problem-solving and eager for more challenges and professional growth."
+    },
+    "about": {
+      "title": "About Me",
+      "first_word": "About",
+      "rest": " Me",
+      "content": {
+        "first_paragraph": "Since 2016, at the age of 15, I began my journey in the world of development. However, upon entering the workforce in the help desk support area, I initially thought that programming was not my vocation. It was only later, on my own, that I rediscovered my love for programming, driven by the need to automate daily tasks and create applications that would optimize my team's operations.",
+        "second_paragraph": "Professionally, my journey as a developer began in 2021. I started with task automations, ranging from integrating Google tools, such as Gmail + Google Sheets, to using Arduino to automate manual processes. Over time, I evolved to lead the development of full-fledged applications, solidifying my passion for turning challenges into innovative technological solutions."
+      }
+    },
+    "techs": {
+      "title": "Techs",
+      "others": "Other Techs/Tools",
+      "options": {
+        "experience": {
+          "title": "Have Experience",
+          "tooltip": "Already used in professional experiences or in more complex personal projects"
+        },
+        "learning": {
+          "title": "Learning",
+          "tooltip": "Already used in small personal projects or in exercises for practice"
+        },
+        "want": {
+          "title": "Want to learn",
+          "tooltip": "Technologies I'm interested in learning"
+        }
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "content": "Here, you will find frequent updates on my main projects, including personal works that will be used by me, completion of courses, freelance projects, and so on. I will not include smaller projects that were developed solely for practice and will never see a user in real life."
+    },
+    "contact": {
+      "title": "Contact Me",
+      "inputs": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your Name"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Your E-mail for return"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "E-mail Subject"
+        },
+        "content": {
+          "label": "Message",
+          "placeholder": "E-mail Content"
+        },
+        "send": "Send E-mail"
+      }
+    }
+  },
+  "footer": "© 2024 - Silvio Cesar - In constant development"
+}

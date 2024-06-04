@@ -31,6 +31,10 @@ export const Intro = styled.div`
     padding: 180px 0;
   }
 
+  @media (max-width: ${DEVICE_BREAKPOINTS.SM}) {
+    padding: 120px 0;
+  }
+
   > div {
     display: flex;
     justify-content: center;
